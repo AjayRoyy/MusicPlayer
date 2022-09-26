@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../music player/music.css">
+    <title>Heat Player</title>
+</head>
+
+<body onload="datetime()">
+
+    <div class="main">
+        <div class="outline" id="outline">
+            <nav>
+                <p class="p1" id="p1">Date</p>
+                <ion-icon name="wifi-outline"></ion-icon>
+                <ion-icon name="battery-half-outline"></ion-icon>
+            </nav>
+            <div class="details">
+                <img src="../music player/media/songs/dandilions album art.jpeg" class="disc1" id="disc1" alt="">
+                <p id="songName">Dandilions</p>
+                <p id="artistName">Ruth.B</p>
+            </div>
+            <div class="controls">
+                <div class="icons">
+                    <!-- <ion-icon class="buttons" id="" name="play-back-outline"></ion-icon> -->
+                    <ion-icon class="buttons" id="playBack" name="play-back-circle-outline"></ion-icon>
+                    <ion-icon class="buttons" id="play" name="play-circle-outline"></ion-icon>
+                    <ion-icon class="buttons" name="pause-circle-outline" id="pause"></ion-icon>
+                    <ion-icon class="buttons" id="playForward" name="play-forward-circle-outline"></ion-icon>
+                    <!-- <ion-icon class="buttons" id="" name="play-forward-outline"></ion-icon> -->
+                </div>
+                <div class="slider">
+                    <span class="songtime" id="startTime">0:00</span>
+                    <input type="range" min="1" max="100" value="0" name="input1" id="range1">
+                    <span class="songtime" id="songTime">0:00</span>
+                </div>
+            </div>
+        </div>
+        <span class="spans sp1" id="sp1"></span>
+        <span class="spans sp2" id="sp2"></span>
+        <span class="spans sp3" id="sp3"></span>
+        <span class="spans sp4" id="sp4"></span>
+    </div>
+
+
+</body>
+<script src="../music player/music.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</html>
