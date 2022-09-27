@@ -29,39 +29,24 @@ let tracks = [
         title: "Dandilions",
         artist: "B.Ruth",
         AlbumArt: "https://cdns-images.dzcdn.net/images/cover/1a4b3f5a1edd5e7c43ed8e11fb2f021c/500x500.jpg",
-        MP3: "../music player/media/songs/Ruth-B-Dandelions.mp3"
+        MP3: "../MusicPlayer/media/songs/Ruth-B-Dandelions.mp3"
 
     },
     {
         title: "Middle Of The Night",
         artist: "Elley Duhé",
         AlbumArt: "https://i.scdn.co/image/ab67616d0000b27353a2e11c1bde700722fecd2e",
-        MP3: "../music player/media/songs/Middle-Of-The-Night-SabPagal.mp3"
+        MP3: "../MusicPlayer/media/songs/Middle-Of-The-Night-SabPagal.mp3"
     },
     {
         title: "Vibez",
         artist: "Zayn Malik",
         AlbumArt: "https://preview.redd.it/ezg5ex8prm171.jpg?width=640&crop=smart&auto=webp&s=aea2a192185d5cd25ceae3a99602d095e5bbf1ec",
-        MP3: "../music player/media/songs/Vibez Nobody Is Listening 320 Kbps.mp3"
-    },
+        MP3: "../MusicPlayer/media/songs/Vibez Nobody Is Listening 320 Kbps.mp3"
+    }
 ];
-
-
-// const options = {
-// 	method: 'GET',
-// 	headers: {
-// 		'X-RapidAPI-Key': '7e39b5f50dmsh8764ec9511e1ee5p143d96jsnb1d550f90b8c',
-// 		'X-RapidAPI-Host': 'spotify23.p.rapidapi.com'
-// 	}
-// };
-
-// let searches = async function(){
-//     let response = await fetch('https://spotify23.p.rapidapi.com/search/?q=zayn&type=multi&offset=0&limit=10&numberOfTopResults=5', options);
-// 	let data = await response.json();
-    
-    // console.log(data);
     songIndex=0;
-    // currentSong.src=data.tracks.items[songIndex].data.uri;
+
 currentSong.src=tracks[songIndex].MP3;
 
 
@@ -97,7 +82,6 @@ function nextTrack(){
         songIndex=0;
     }
     currentSong.src=tracks[songIndex].MP3;
-    // currentSong.src=data.tracks.items[songIndex].data.uri;
     SongArtt.src=tracks[songIndex].AlbumArt;
     artistName.textContent =tracks[songIndex].artist;
     songName.textContent = tracks[songIndex].title;
@@ -113,7 +97,6 @@ function prev()
         songIndex = tracks.length -1;
     }
     currentSong.src=tracks[songIndex].MP3;
-    // currentSong.src=data.tracks.items[songIndex].data.uri;
     SongArtt.src=tracks[songIndex].AlbumArt;
     artistName.textContent =tracks[songIndex].artist;
     songName.textContent = tracks[songIndex].title;
@@ -148,4 +131,3 @@ function changeslider()
 }
 
 range1.addEventListener("click",changeslider);
-
